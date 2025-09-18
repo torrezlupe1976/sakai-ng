@@ -1,0 +1,18 @@
+<div style="background: #faffce;">
+    <h2>Mi componente 08</h2>
+    <button (click)="navigateToComponente01()">Ir al componente01 (navigate)</button>
+    <br>
+    <button (click)="navigateToComponente02()">Ir al componente02 (navigateByUrl)</button>
+    <br>
+    <a [routerLink]="['/practicas/componente09', 'juan', 10]">
+        Ir a componente09 (Paso de parámetros - pathPAram)
+    </a>
+    <br>
+     <a [routerLink]="'/practicas/componente10'"
+        [queryParams]="{param_nombre:'Maria', param_edad:15}">
+        Ir a componente10 (Paso de parámetros - QueryParam)
+    </a>
+    <br>
+    <button (click)="redirectToComponente09()">Ir a componente09</button> <br>
+    <button (click)="redirectToComponente10()">Ir a componente10</button> <br>
+</div>

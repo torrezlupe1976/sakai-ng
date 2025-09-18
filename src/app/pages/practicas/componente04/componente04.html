@@ -1,0 +1,95 @@
+<div style="background: #ffdfe9;">
+    <h2>Mi componente 04</h2>
+    <table>
+        <tr>
+        <th>PIPE</th>
+        <th>VALUE</th>
+        <th>RESULT</th>
+        </tr>
+        <tr>
+            <td>UpperCase</td>
+            <td>{{nombreCompleto}}</td>
+            <td>{{nombreCompleto | uppercase}}</td>
+        </tr>
+        <tr>
+            <td>LowerCase</td>
+            <td>{{nombreCompleto}}</td>
+            <td>{{nombreCompleto | lowercase}}</td>
+        </tr>
+        <tr>
+            <td>Slice</td>
+            <td>{{nombreCompleto}}</td>
+            <td>{{nombreCompleto | slice: 5 : 11}}</td>
+        </tr>
+        <tr>
+            <td>Decimal Simple</td>
+            <td>{{sueldo}}</td>
+            <td>{{sueldo | number}}</td>
+        </tr>
+        <tr>
+            <td>Decimal Custom</td>
+            <td>{{sueldo}}</td>
+            <td>{{sueldo | number:"1.2-5"}}</td>
+        </tr>
+
+        <tr>
+            <td>Percent</td>
+            <td>{{avancePorcentaje}}</td>
+            <td>{{avancePorcentaje | percent}}</td>
+        </tr>
+
+        <tr>
+            <td>Currency</td>
+            <td>{{sueldo}}</td>
+            <td>{{sueldo | currency:"BOB"}}</td>
+        </tr>
+
+        <tr>
+            <td>Json</td>
+            <td>{{domicilio}}</td>
+            <td>{{domicilio | json}}</td>
+        </tr>
+
+        <tr>
+            <td>Async</td>
+            <td>{{myPromise}}</td>
+            <td>{{myPromise | async}}</td>
+        </tr>
+
+        <tr>
+            <td>Date</td>
+            <td>{{myDate}}</td>
+            <td>{{myDate | date}}</td>
+        </tr>
+
+         <tr>
+            <td>Date FullDate</td>
+            <td>{{myDate}}</td>
+            <td>{{myDate | date:"fullDate"}}</td>
+        </tr>
+
+        <tr>
+            <td>Date shortDate</td>
+            <td>{{myDate}}</td>
+            <td>{{myDate | date:"shortDate"}}</td>
+        </tr>
+
+        <tr>
+            <td>Date Custom</td>
+            <td>{{myDate}}</td>
+            <td>{{myDate | date:"dd/MM/yyyy HH:mm:ss"}}</td>
+        </tr>
+
+        <tr>
+            <td>Date | UpperCase</td>
+            <td>{{myDate}}</td>
+            <td>{{myDate | date:"fullDate" | uppercase}}</td>
+        </tr>
+
+        <tr>
+            <td>Custom Age Pipe</td>
+            <td>{{myBirthday}}</td>
+            <td>{{myBirthday | age }} años</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,78 @@
+<div style="background: #ccffdb;">
+<h2>Mi componente 03</h2>
+<h3>Directiva de atributo NgClass</h3>
+<div [ngClass]="{active: isActive, 
+                error: hasError,
+                disabled:status === 'COMPLETED',}">
+    Este div cambia de clases dinámicamente
+</div>
+
+<button (click)="toggleActive()">Toogle Active</button>
+<button (click)="toggleError()">Toogle Error</button>
+<button (click)="toggleStatus()">Toogle Status</button>
+
+<h3>Directiva de Atributo - NgStyle</h3>
+<div [ngStyle]="{
+    color:textColor,
+    'font-size.px': fontSise,
+    'background-color': bgColor,
+    'padding.px': paddingSize,
+}">
+
+    Este div cambia de estilos dinamicamente
+</div>
+<button (click)="changeColor('blue')">Blue Text</button>
+<button (click)="changeColor('red')">Red Text</button>
+<button (click)="increaseSize()">Increase Font</button>
+
+<h3>Control Flow - @_if</h3>
+<button (click)="toggleStatus()">Toogle Status</button>
+@if(status === 'COMPLETED'){
+    
+<div> 
+    <app-saludo/>
+</div>
+}
+
+<h3>Control Flow - @_if -else-if</h3>
+<p>Nota: {{score}}</p>
+@if( score >=90 ){
+    <p>Observacion: Excelente</p>
+} @else if(score >=80 && score <90){
+    <p>Observacion: Bueno</p>
+}@else if(score >=80 && score <90){
+    <p>Observacion: Regular</p>
+}@else {
+    <p>Observacion: Malo</p>
+}
+
+<h3>Control Flow - @_switch</h3>
+@switch (status){
+    @case ('COMPLETED'){
+        <P>Completado con éxito</P>
+    }@case (('PENDING')) {
+        <p>PENDIENTE</p>
+    }@default {
+        <p>Estado no reconocido</p>
+    }
+}
+
+<h3>Control Flow - @_for</h3>
+<table>
+    <th>ID</th>
+    <th>NOMBRE</th>
+    <th>ESTADO</th>
+    <th>PRIORIDAD</th>
+    <th>VENCIMIENTO</th>
+    
+    @for(tarea of tareaArray; track tarea.id){
+    <tr>
+        <td>{{tarea.id}}</td>
+        <td>{{tarea.nombre}}</td>
+        <td>{{tarea.estado}}</td>
+        <td>{{tarea.prioridad}}</td>
+        <td>{{tarea.fechaVencimiento}}</td>
+    </tr>
+    }
+</table>
+</div>
