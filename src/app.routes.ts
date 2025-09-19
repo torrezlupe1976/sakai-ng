@@ -12,11 +12,11 @@ export const appRoutes: Routes = [
         children: [
             { path: '', component: Dashboard },
 
-            { path: 'practicas', loadChildren: () => import('./app/pages/practicas/practicas.routes').then((m) => m.practicasRoutes),},
-            //{ path: 'practicas', loadChildren: () => import('./app/pages/practicas/practicas.routes') },
+            { path: 'practicas', loadChildren: () => import('./app/pages/practicas/practicas.routes').then((m) => m.practicasRoutes),},           
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
-            { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') }
+            { path: 'pages', loadChildren: () => import('./app/pages/pages.routes') },
+            { path: 'user', loadChildren: () => import('./app/pages/user/user.routes') }
         ]
     },
     { path: 'landing', component: Landing },

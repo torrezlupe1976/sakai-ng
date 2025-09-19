@@ -1,0 +1,67 @@
+<!-- <p-fluid> -->
+        <div class="flex flex-col md:flex-row gap-8">
+            
+            <div class="md:w-1/2">
+                <form class="register-form" [formGroup]="formGroup">
+                <div class="card flex flex-col gap-4">
+                    <div class="font-semibold text-xl">Registro nuevo Usuario</div>
+                    <div class="flex flex-col gap-2">
+                        <label for="nombres">Nombres</label>
+                        <input pInputText type="text" placeholder="Ingrese sus nombres" formControlName="nombres"/>
+                        @if(nombresField.invalid && (nombresField.touched || nombresField.dirty)){                      
+                            @if(nombresField.hasError('required')){
+                                <p-message severity="error" variant="simple" size="small">Por favor ingrese su nombre completo</p-message>
+                            }
+                        }
+                        
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="apellidos">Apellidos</label>
+                        <input pInputText type="text" placeholder="Ingrese sus apellidos" formControlName="apellidos"/>
+                        @if(apellidosField.invalid && (apellidosField.touched || apellidosField.dirty)){
+                            @if(apellidosField.hasError('required')){
+                                <p-message severity="error" variant="simple" size="small">Por favor ingrese sus apellidos</p-message>
+                            }
+                        }
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="email1">Correo Electrónico</label>
+                        <input pInputText type="email"  placeholder="Ingrese su correo electronico" formControlName="correo"/>
+                        @if(correoField.hasError('required') && (correoField.touched || correoField.dirty)){                           
+                            <p-message severity="error" variant="simple" size="small">Por favor ingrese su correo electronico</p-message>
+                        }   
+                        @if(correoField.hasError('email')&& (correoField.touched || correoField.dirty)){
+                            <p-message severity="error" variant="simple" size="small">formato inválido para correo electronico</p-message>
+                        }                            
+                        
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="age1">Contraseña</label>
+                        <input pInputText id="correo" type="password" placeholder="Ingrese su contraseña" formControlName="password"/>
+                        @if(passwordField.invalid && (passwordField.touched || passwordField.dirty)){
+                            @if(passwordField.hasError('required')){
+                            <p-message severity="error" variant="simple" size="small">Por favor ingrese su contraseña</p-message>
+                            }
+                            @if(passwordField.hasError('customPasswordValidator')){
+                                <p-message severity="error" variant="simple" size="small">La contraseña debe denete una mayuscula, minuscula un catacter especial y 8 catacteres</p-message>
+                            }
+                        }
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="age1">Repetir contraseña</label>
+                        <input pInputText id="confirmPassword" type="password" placeholder="Repetir contraseña" formControlName="confirmPassword"/>
+                        @if(confirmPasswordField.invalid && (confirmPasswordField.touched || confirmPasswordField.dirty)){
+                            @if(confirmPasswordField.hasError('required')){
+                                <p-message severity="error" variant="simple" size="small">Repetir contraseña</p-message>
+                            }
+                        }
+                    </div>
+
+                     <p-button label="Registrarse" (click)="clickRegister()"></p-button>
+                </div>
+                </form>
+            </div>
+            
+        </div>
+        
+<!--     </p-fluid> -->

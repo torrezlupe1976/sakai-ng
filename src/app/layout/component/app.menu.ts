@@ -28,7 +28,7 @@ export class AppMenu {
                 label: 'UI Components',
                 items: [
                     { label: 'Componente01', icon: 'pi pi-fw pi-id-card', routerLink: ['/practicas/componente01'] },
-                     { label: 'Componente02', icon: 'pi pi-fw pi-check-square', routerLink: ['/practicas/componente02'] },
+                    { label: 'Componente02', icon: 'pi pi-fw pi-check-square', routerLink: ['/practicas/componente02'] },
                     { label: 'Componente03', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/practicas/componente03'] },
                     { label: 'Componente04', icon: 'pi pi-fw pi-table', routerLink: ['/practicas/componente04'] },
                     { label: 'Componente05', icon: 'pi pi-fw pi-list', routerLink: ['/practicas/componente05'] },
@@ -37,18 +37,18 @@ export class AppMenu {
                     { label: 'Componente08', icon: 'pi pi-fw pi-clone', routerLink: ['/practicas/componente08'] },
                     { label: 'Componente09', icon: 'pi pi-fw pi-image', routerLink: ['/practicas/componente09', 'Alex', 20] },
                     { label: 'Componente10', icon: 'pi pi-fw pi-bars', routerLink: ['/practicas/componente10'] },
-                    { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/practicas/componente11'] }
+                   
                     
-                   /* { label: 'Componente02', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/layout'] },
-                   { label: 'Componente02', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
-                    { label: 'Componente03', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/uikit/button'] },
-                    { label: 'Componente04', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table'] },
-                    { label: 'Componente05', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
-                    { label: 'Componente06', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
-                    { label: 'Componente07', icon: 'pi pi-fw pi-tablet', routerLink: ['/uikit/panel'] },
-                    { label: 'Componente08', icon: 'pi pi-fw pi-clone', routerLink: ['/uikit/overlay'] },
-                    { label: 'Componente09', icon: 'pi pi-fw pi-image', routerLink: ['/uikit/media'] },
-                    { label: 'Componente10', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'] },
+                   /* { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
+                    { label: 'Button', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/uikit/button'] },
+                    { label: 'Table', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table'] },
+                    { label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
+                    { label: 'Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
+                    { label: 'Panel', icon: 'pi pi-fw pi-tablet', routerLink: ['/uikit/panel'] },
+                    { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/uikit/overlay'] },
+                    { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/uikit/media'] },
+                    { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'] },
                     { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/uikit/message'] },
                     { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/uikit/file'] },
                     { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts'] },
@@ -67,10 +67,18 @@ export class AppMenu {
                         routerLink: ['/landing']
                     },*/
                     {
-                        label: 'Usuarios',
+                        label: 'Formulario Reactivo',
                         icon: 'pi pi-fw pi-user',
-                        items: [
+                        routerLink: ['/user/new-user']
+                    },
+                        /*tems: [
                             {
+                                label: 'Formulario Reactivo',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/user/new-user']
+                            },*/
+
+                            /*{
                                 label: 'Login',
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/auth/login']
@@ -86,13 +94,13 @@ export class AppMenu {
                                 routerLink: ['/auth/access']
                             }
                         ]
-                    },
+                    },*/
                     {
                         label: 'Productos',
                         icon: 'pi pi-fw pi-pencil',
                         routerLink: ['/pages/crud']
                     },
-                    {
+                    /*{
                         label: 'Not Found',
                         icon: 'pi pi-fw pi-exclamation-circle',
                         routerLink: ['/pages/notfound']
@@ -101,10 +109,10 @@ export class AppMenu {
                         label: 'Empty',
                         icon: 'pi pi-fw pi-circle-off',
                         routerLink: ['/pages/empty']
-                    }
+                    }*/
                 ]
             },
-            {
+           /* {
                 label: 'Hierarchy',
                 items: [
                     {
@@ -147,8 +155,8 @@ export class AppMenu {
                         ]
                     }
                 ]
-            },
-            {
+            },*/
+           /* {
                 label: 'Get Started',
                 items: [
                     {
@@ -163,7 +171,7 @@ export class AppMenu {
                         target: '_blank'
                     }
                 ]
-            }
+            }*/
         ];
     }
 }
